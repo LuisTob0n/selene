@@ -84,20 +84,20 @@ h1, h2, h3, h4, h5, h6, figure {
   background: #F14E95;
 }
 
+
+
+/* TEXTO MY BODA EN EL HEADER */
+
 .fh5co-nav {
   position: absolute;
   top: 0;
   margin: 0;
   padding: 0;
   width: 100%;
-  padding: 40px 0;
+  padding: 20px 0;
   z-index: 1001;
 }
-@media screen and (max-width: 768px) {
-  .fh5co-nav {
-    padding: 20px 0;
-  }
-}
+
 .fh5co-nav #fh5co-logo {
   font-size: 40px;
   margin: 0;
@@ -109,6 +109,29 @@ h1, h2, h3, h4, h5, h6, figure {
   padding: 5px 10px;
   color: #fff;
 }
+
+@media screen and (max-width: 768px) {
+  .fh5co-nav {
+    padding: -20;
+  }
+
+  .fh5co-nav #fh5co-logo {
+    font-size: 32px;  /* Reducir el tamaño de la fuente en móviles */
+    line-height: 30px;  /* Ajustar el line-height */
+    font-weight: 500;
+    font-family: "Sacramento", Arial, serif;
+    white-space: nowrap;  /* Asegurarse de que "My Boda" se quede en una sola línea */
+  }
+
+  .fh5co-nav a {
+    color: #fff;
+  }
+}
+
+/* TEXTO MY BODA EN EL HEADER */
+
+
+
 @media screen and (max-width: 768px) {
   .fh5co-nav .menu-1, .fh5co-nav .menu-2 {
     display: none;
@@ -204,7 +227,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -761,13 +784,13 @@ h1, h2, h3, h4, h5, h6, figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 .fh5co-social-icons li a {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   color: #F14E95;
   padding-left: 10px;
   padding-right: 10px;
@@ -823,12 +846,17 @@ form label {
   font-weight: normal !important;
 }
 
+
+
+/* TEXTO SELENE Y CRISTIAN DEL HEADER */
+
 #fh5co-header .display-tc,
 #fh5co-counter .display-tc,
 .fh5co-cover .display-tc {
   display: table-cell !important;
   vertical-align: middle;
 }
+
 #fh5co-header .display-tc h1, #fh5co-header .display-tc h2,
 #fh5co-counter .display-tc h1,
 #fh5co-counter .display-tc h2,
@@ -838,6 +866,7 @@ form label {
   padding: 0;
   color: white;
 }
+
 #fh5co-header .display-tc h1,
 #fh5co-counter .display-tc h1,
 .fh5co-cover .display-tc h1 {
@@ -846,20 +875,7 @@ form label {
   line-height: 1.5;
   font-family: "Sacramento", Arial, serif;
 }
-@media screen and (max-width: 768px) {
-  #fh5co-header .display-tc h1,
-  #fh5co-counter .display-tc h1,
-  .fh5co-cover .display-tc h1 {
-    font-size: 40px;
-  }
-}
-@media screen and (max-width: 480px) {
-  #fh5co-header .display-tc h1,
-  #fh5co-counter .display-tc h1,
-  .fh5co-cover .display-tc h1 {
-    font-size: 30px;
-  }
-}
+
 #fh5co-header .display-tc h2,
 #fh5co-counter .display-tc h2,
 .fh5co-cover .display-tc h2 {
@@ -867,31 +883,73 @@ form label {
   line-height: 1.5;
   margin-bottom: 30px;
 }
+
+@media screen and (max-width: 768px) {
+  #fh5co-header .display-tc h1,
+  #fh5co-counter .display-tc h1,
+  .fh5co-cover .display-tc h1 {
+    font-size: 56px !important;
+  }
+
+  #fh5co-header .display-tc h2,
+  #fh5co-counter .display-tc h2,
+  .fh5co-cover .display-tc h2 {
+    font-size: 14px !important;
+    margin-bottom: 30px;
+  }
+
+}
+
 @media screen and (max-width: 480px) {
   #fh5co-header .display-tc h2,
   #fh5co-counter .display-tc h2,
   .fh5co-cover .display-tc h2 {
     font-size: 16px;
   }
+
+  #fh5co-header .display-tc h1,
+  #fh5co-counter .display-tc h1,
+  .fh5co-cover .display-tc h1 {
+    font-size: 30px;
+  }
 }
+
+/* TEXTO SELENE Y CRISTIAN DEL HEADER */
+
+
+
+/* Estilos del botón CONFIRMAR ASISTENCIA */
+
 #fh5co-header .display-tc .btn,
 #fh5co-counter .display-tc .btn,
 .fh5co-cover .display-tc .btn {
-  padding: 15px 20px;
-  background: #fff !important;
-  color: #F14E95;
+  padding: 12px 15px;
+  background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%) !important;
+  color: white;
   border: none !important;
   font-size: 14px;
   text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 18px; /* Si quieres bordes redondeados */
+  transition: 0.5s;
+  background-size: 200% auto; /* Para darle el efecto de transición */
+  display: inline-block; /* Asegura que se comporta como un bloque */
 }
+
+/* Efecto hover */
 #fh5co-header .display-tc .btn:hover,
 #fh5co-counter .display-tc .btn:hover,
 .fh5co-cover .display-tc .btn:hover {
-  background: #fff !important;
-  -webkit-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
-  -moz-box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
-  box-shadow: 0px 14px 30px -15px rgba(0, 0, 0, 0.75) !important;
+  background-position: right center; /* Mueve el gradiente cuando se pasa el mouse */
+  color: white;
+  text-decoration: none;
 }
+
+/* Estilos del botón CONFIRMAR ASISTENCIA */
+
+
+
+/* Estilos de la cuenta atras */
 
 #fh5co-counter {
   text-align: center;
@@ -909,11 +967,7 @@ form label {
   color: rgba(255, 255, 255, 0.5);
   letter-spacing: .1em;
 }
-@media screen and (max-width: 768px) {
-  #fh5co-counter .feature-center {
-    margin-bottom: 50px;
-  }
-}
+
 #fh5co-counter .icon {
   width: 70px;
   height: 70px;
@@ -933,62 +987,104 @@ form label {
 }
 
 .simply-countdown {
-  /* The countdown */
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 .simply-countdown > .simply-section {
-  /* coutndown blocks */
   display: inline-block;
-  width: 100px;
-  height: 100px;
-  background: rgba(0, 105, 216, 0.461);
-  margin: 0 4px;
+  width: 70px;
+  height: 70px;
+  background: rgba(241, 78, 149, 0);
+  margin: 0 40px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
-  border-radius: 30%;
+  border-radius: 50%;
   position: relative;
-  animation: pulse 1s ease infinite;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 .simply-countdown > .simply-section > div {
-  /* countdown block inner div */
-  display: table-cell;
-  vertical-align: middle;
-  height: 100px;
-  width: 100px;
-}
-
-.simply-countdown > .simply-section .simply-amount,
-.simply-countdown > .simply-section .simply-word {
-  display: block;
-  color: white;
-  /* amounts and words */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
 }
 
 .simply-countdown > .simply-section .simply-amount {
-  font-size: 25px;
-  /* amounts */
+  display: block;
+  font-size: 88px;
+  font-weight: bolder;
+  text-shadow: 0 0 35px rgb(255, 255, 255);
+  color:rgb(255, 255, 255);
+  margin-bottom: 0;
+  line-height: 0;
 }
 
 .simply-countdown > .simply-section .simply-word {
-  color: rgba(255, 255, 255, 0.7);
+  display: block;
+  color: rgb(0, 0, 0);
   text-transform: uppercase;
-  font-size: 12px;
-  /* words */
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-top: 0;
+  line-height: 0;
 }
+
+@media screen and (max-width: 768px) {
+
+  #fh5co-counter .feature-center {
+    margin-bottom: 50px;
+  }
+
+  .simply-countdown > .simply-section {
+    width: 71px;
+    height: 71px;
+    margin: 0 12px;
+ }
+
+ .simply-countdown > .simply-section > div {
+    width: 71px;
+    height: 71px;
+ }
+
+ .simply-countdown > .simply-section .simply-amount {
+    font-size: 54px;
+    margin-bottom: 0;
+    line-height: 0;
+ }
+
+ .simply-countdown > .simply-section .simply-word {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 0;
+    line-height: 0;
+ }
+}
+
+/* Estilos de la cuenta atras */
+
+
+
+/* Estilos del Footer */
+#fh5co-footer {
+    background-color: #161616; /* Fondo oscuro elegante */
+    color: #fff; /* Texto en blanco */
+    padding: 20px 0; /* Espaciado vertical */
+    text-align: center;
+}
+
+#fh5co-footer a {
+    color: #91b0d8; /* Links en un tono suave */
+}
+
+#fh5co-footer a:hover {
+    color: #fff; /* Al pasar el mouse se ven blancos */
+}
+
 
 #fh5co-testimonial,
 #fh5co-services,
@@ -999,7 +1095,7 @@ form label {
 #fh5co-couple,
 #fh5co-gallery,
 .fh5co-section {
-  padding: 7em 0;
+  padding: 1em 0;
   clear: both;
 }
 @media screen and (max-width: 768px) {
@@ -1012,9 +1108,44 @@ form label {
   #fh5co-couple,
   #fh5co-gallery,
   .fh5co-section {
-    padding: 3em 0;
+    padding: 1em 0;
   }
+
+  #fh5co-footer{
+    background-color: #161616 !important;
+  }
+  .couple-wrap {
+    width: 100%;
+  }
+
+  /*Quita los espacios dentro del footer*/
+  .row p{
+   margin-bottom: 0 !important;
+   padding-bottom: 0 !important;
+   margin: 0;
+   padding: 0;
+  }
+
+  #footerRights{
+   margin-bottom: 10px !important;
+  }
+ 
 }
+
+/*Quita los espacios dentro del footer*/
+.row p{
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  margin: 0;
+  padding: 0;
+}
+
+#footerRights{
+  margin-bottom: 10px !important;
+}
+/* Estilos del Footer */
+
+
 
 .fh5co-section-gray {
   background: rgba(0, 0, 0, 0.04);
@@ -1024,11 +1155,6 @@ form label {
   width: 90%;
   margin: 0 auto;
   position: relative;
-}
-@media screen and (max-width: 768px) {
-  .couple-wrap {
-    width: 100%;
-  }
 }
 
 .heart {
@@ -1085,7 +1211,6 @@ form label {
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
-  object-fit: cover;
 }
 @media screen and (max-width: 480px) {
   .couple-half .groom, .couple-half .bride {
@@ -1225,7 +1350,7 @@ form label {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   width: 100px;
   height: 100px;
 }
@@ -1407,6 +1532,7 @@ form label {
 #fh5co-footer .copyright .block {
   display: block;
 }
+
 
 .owl-carousel .owl-controls .owl-dot span {
   background: #e6e6e6;
@@ -1658,7 +1784,7 @@ form label {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-  padding: 8px 20px;
+  padding: 8px 220px;
 }
 .btn.btn-md {
   padding: 8px 20px !important;
@@ -1840,5 +1966,3 @@ form label {
 .js .animate-box {
   opacity: 0;
 }
-
-/*# sourceMappingURL=style.css.map */

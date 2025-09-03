@@ -1,15 +1,3 @@
-/*!
- * Project : simply-countdown
- * File : simplyCountdown
- * Date : 27/06/2015
- * License : MIT
- * Version : 1.3.2
- * Author : Vincent Loy <vincent.loy1@gmail.com>
- * Contributors : 
- *  - Justin Beasley <JustinB@harvest.org>
- *  - Nathan Smith <NathanS@harvest.org>
- */
-/*global window, document*/
 (function (exports) {
     'use strict';
 
@@ -122,10 +110,10 @@
                 minutes: 0,
                 seconds: 0,
                 words: {
-                    days: 'day',
-                    hours: 'hour',
-                    minutes: 'minute',
-                    seconds: 'second',
+                    days: 'dia',
+                    hours: 'hora',
+                    minutes: 'minuto',
+                    seconds: 'segundo',
                     pluralLetter: 's'
                 },
                 plural: true,
