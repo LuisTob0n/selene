@@ -916,36 +916,162 @@ form label {
 
 /* TEXTO SELENE Y CRISTIAN DEL HEADER */
 
+/* BOTONES HEADER */
 
 
-/* Estilos del botón CONFIRMAR ASISTENCIA */
+
+/* BOTON 1 RGB
+
+#fh5co-header .display-tc .btn,
+#fh5co-counter .display-tc .btn,
+.fh5co-cover .display-tc .btn  {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#fh5co-header .display-tc .btn:before,
+#fh5co-counter .display-tc .btn:before,
+.fh5co-cover .display-tc .btn:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+#fh5co-header .display-tc .btn:after,
+#fh5co-counter .display-tc .btn:after,
+.fh5co-cover .display-tc .btn:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+ BOTON 1 RGB*/
+
+#fh5co-header .display-tc .btn,
+#fh5co-counter .display-tc .btn,
+.fh5co-cover .display-tc .btn {
+  appearance: none;
+  background-color: transparent;
+  border: 0.1em solid #ffffff;
+  border-radius: 15px; /* más redondeado */
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  min-height: 3em; /* más compacto que el original Uiverse */
+  min-width: 0;
+  padding: 0.8em 2em;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  will-change: transform;
+}
+
+/* Hover */
+#fh5co-header .display-tc .btn:hover,
+#fh5co-counter .display-tc .btn:hover,
+.fh5co-cover .display-tc .btn:hover {
+  color: #fff;
+  background-color: #202020;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+  text-decoration: none;
+  border: none;
+}
+
+/* Active */
+#fh5co-header .display-tc .btn:active,
+#fh5co-counter .display-tc .btn:active,
+.fh5co-cover .display-tc .btn:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+
+
+/* BOTON 2 
 
 #fh5co-header .display-tc .btn,
 #fh5co-counter .display-tc .btn,
 .fh5co-cover .display-tc .btn {
   padding: 12px 15px;
-  background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%) !important;
+  background-image: linear-gradient(to right, #4F6892 0%, #617AA5  51%, #4F6892 100%) !important;
   color: white;
   border: none !important;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
-  border-radius: 18px; /* Si quieres bordes redondeados */
+  border-radius: 18px; 
   transition: 0.5s;
-  background-size: 200% auto; /* Para darle el efecto de transición */
-  display: inline-block; /* Asegura que se comporta como un bloque */
+  background-size: 200% auto;
+  display: inline-block; 
 }
 
-/* Efecto hover */
+
 #fh5co-header .display-tc .btn:hover,
 #fh5co-counter .display-tc .btn:hover,
 .fh5co-cover .display-tc .btn:hover {
-  background-position: right center; /* Mueve el gradiente cuando se pasa el mouse */
+  background-position: right center;
   color: white;
   text-decoration: none;
 }
 
-/* Estilos del botón CONFIRMAR ASISTENCIA */
+BOTON 2 */
 
 
 
@@ -1157,24 +1283,55 @@ form label {
   position: relative;
 }
 
+
+
+/* CORAZON */
 .heart {
   position: absolute;
   top: 4em;
-  left: 0;
-  right: 0;
-  z-index: 99;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #ff0000;
+  transform: rotate(-45deg);
   animation: pulse 1s ease infinite;
+  z-index: 99;
 }
-.heart i {
-  font-size: 20px;
-  background: #fff;
-  padding: 20px;
-  color: #F14E95;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #ff0000;
   border-radius: 50%;
 }
+
+.heart::before {
+  top: -15px; /* mitad del tamaño para alinear */
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 15px; /* mitad del tamaño */
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: translateX(-50%) scale(1) rotate(-45deg);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.2) rotate(-45deg);
+  }
+}
+
+/* CORAZON */
+
+
+
 @media screen and (max-width: 768px) {
   .heart {
     display: none;
