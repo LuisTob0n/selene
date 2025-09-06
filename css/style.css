@@ -16,7 +16,7 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: #828282;
-  background: #fff;
+  background: #F8F8FF !important;
 }
 
 #page {
@@ -389,10 +389,15 @@ h1, h2, h3, h4, h5, h6, figure {
   display: table;
   width: 100%;
 }
+
+/* Texto en ubicacion */
 #fh5co-counter .fh5co-heading h2,
 #fh5co-event .fh5co-heading h2 {
-  color: #fff;
+  color: #f7f7f7;
+  font-size: 7rem;
 }
+
+/* Texto header en ubicacion */
 #fh5co-counter .fh5co-heading span,
 #fh5co-event .fh5co-heading span {
   color: rgba(255, 255, 255, 0.5);
@@ -916,16 +921,16 @@ form label {
 
 /* TEXTO SELENE Y CRISTIAN DEL HEADER */
 
+
+
 /* BOTONES HEADER */
 
 
-
-/* BOTON 1 RGB
-
+/* BOTON RGB
 #fh5co-header .display-tc .btn,
 #fh5co-counter .display-tc .btn,
 .fh5co-cover .display-tc .btn  {
-  padding: 0.6em 2em;
+  padding: 0.6em 1em;
   border: none;
   outline: none;
   color: rgb(255, 255, 255);
@@ -933,7 +938,7 @@ form label {
   cursor: pointer;
   position: relative;
   z-index: 0;
-  border-radius: 10px;
+  border-radius: 16px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -966,7 +971,7 @@ form label {
   height: calc(100% + 4px);
   animation: glowing-button-85 20s linear infinite;
   transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
+  border-radius: 16px;
 }
 
 @keyframes glowing-button-85 {
@@ -992,17 +997,18 @@ form label {
   background: #222;
   left: 0;
   top: 0;
-  border-radius: 10px;
+  border-radius: 16px;
 }
- BOTON 1 RGB*/
+*/
 
+/*BOTON 2 
 #fh5co-header .display-tc .btn,
 #fh5co-counter .display-tc .btn,
 .fh5co-cover .display-tc .btn {
   appearance: none;
   background-color: transparent;
-  border: 0.1em solid #ffffff;
-  border-radius: 15px; /* más redondeado */
+  border: 0.16em solid #ffffff;
+  border-radius: 15px;
   box-sizing: border-box;
   color: #ffffff;
   cursor: pointer;
@@ -1011,7 +1017,7 @@ form label {
   font-size: 16px;
   font-weight: 600;
   line-height: normal;
-  min-height: 3em; /* más compacto que el original Uiverse */
+  min-height: 3em; 
   min-width: 0;
   padding: 0.8em 2em;
   text-align: center;
@@ -1023,55 +1029,54 @@ form label {
   will-change: transform;
 }
 
-/* Hover */
 #fh5co-header .display-tc .btn:hover,
 #fh5co-counter .display-tc .btn:hover,
 .fh5co-cover .display-tc .btn:hover {
-  color: #fff;
-  background-color: #202020;
+  color: #000000;
+  background-color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
   text-decoration: none;
   border: none;
 }
 
-/* Active */
+
 #fh5co-header .display-tc .btn:active,
 #fh5co-counter .display-tc .btn:active,
 .fh5co-cover .display-tc .btn:active {
   box-shadow: none;
   transform: translateY(0);
 }
+*/
 
 
-/* BOTON 2 
+
 
 #fh5co-header .display-tc .btn,
 #fh5co-counter .display-tc .btn,
 .fh5co-cover .display-tc .btn {
   padding: 12px 15px;
-  background-image: linear-gradient(to right, #4F6892 0%, #617AA5  51%, #4F6892 100%) !important;
+  background-color: transparent;
   color: white;
-  border: none !important;
+  border: 0.15em solid #ffffff;
   font-size: 14px;
   text-transform: uppercase;
   font-weight: 600;
-  border-radius: 18px; 
+  border-radius: 15px; 
   transition: 0.5s;
   background-size: 200% auto;
   display: inline-block; 
 }
 
-
 #fh5co-header .display-tc .btn:hover,
 #fh5co-counter .display-tc .btn:hover,
 .fh5co-cover .display-tc .btn:hover {
   background-position: right center;
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
-}
-
-BOTON 2 */
+  background-color: white;
+  box-shadow: 0px 0px 8px rgb(255, 255, 255) !important;
+} 
 
 
 
@@ -1285,15 +1290,15 @@ BOTON 2 */
 
 
 
-/* CORAZON */
+/* CORAZON MAIN*/
 .heart {
   position: absolute;
-  top: 4em;
+  top: 8em;
   left: 50%;
   transform: translateX(-50%);
   width: 30px;
   height: 30px;
-  background-color: #ff0000;
+  background-color: #1a4bad;
   transform: rotate(-45deg);
   animation: pulse 1s ease infinite;
   z-index: 99;
@@ -1305,7 +1310,7 @@ BOTON 2 */
   position: absolute;
   width: 30px;
   height: 30px;
-  background-color: #ff0000;
+  background-color: #1a4bad;
   border-radius: 50%;
 }
 
@@ -1347,10 +1352,12 @@ BOTON 2 */
     width: 100%;
   }
 }
+/* Nombre de los dos en el main */
 .couple-half h3 {
   font-family: "Sacramento", Arial, serif;
-  color: #F14E95;
-  font-size: 30px;
+  color: #22417e;
+  font-size: 5rem;
+  font-weight: 500;
 }
 .couple-half .groom, .couple-half .bride {
   float: left;
@@ -1368,6 +1375,7 @@ BOTON 2 */
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   border-radius: 50%;
+  margin-top: 40%;
 }
 @media screen and (max-width: 480px) {
   .couple-half .groom, .couple-half .bride {
@@ -1459,12 +1467,14 @@ BOTON 2 */
 .fh5co-heading.fh5co-heading-sm {
   margin-bottom: 2em;
 }
+
+/* Texto en main */
 .fh5co-heading h2 {
   font-size: 60px;
   margin-bottom: 10px;
   line-height: 1.5;
-  font-weight: bold;
-  color: #F14E95;
+  font-weight: 500;
+  color: #22417e;
   font-family: "Sacramento", Arial, serif;
 }
 @media screen and (max-width: 768px) {

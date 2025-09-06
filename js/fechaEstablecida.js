@@ -14,5 +14,6 @@ simplyCountdown('.simply-countdown-one', {
     hours: fechaObjetivo.getHours(),
     minutes: fechaObjetivo.getMinutes(),
     seconds: fechaObjetivo.getSeconds(),
-    enableUtc: false // 👈 usar hora local sin convertir a UTC
+    enableUtc: false, // 👈 usar hora local sin convertir a UTC
+    zeroPad: true
 });
