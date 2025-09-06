@@ -375,20 +375,26 @@ h1, h2, h3, h4, h5, h6, figure {
     height: 400px;
   }
 }
-
+ /* Tamaño contenedor ubicacion */
 #fh5co-counter,
 #fh5co-event {
-  height: 850px;
+  height: 39em;
   float: left;
 }
 #fh5co-counter .display-t,
 #fh5co-counter .display-tc,
 #fh5co-event .display-t,
 #fh5co-event .display-tc {
-  height: 700px;
+  height: 700px !important;
   display: table;
   width: 100%;
-}
+  /* justify-content: center !important;
+  justify-items: center !important;
+  justify-self: center !important;
+  align-items: center !important;
+  align-self: center !important;
+  align-content: center !important; */
+} 
 
 /* Texto en ubicacion */
 #fh5co-counter .fh5co-heading h2,
@@ -397,7 +403,7 @@ h1, h2, h3, h4, h5, h6, figure {
   font-size: 7rem;
 }
 
-/* Texto header en ubicacion */
+/* Texto  evento en header en ubicacion */
 #fh5co-counter .fh5co-heading span,
 #fh5co-event .fh5co-heading span {
   color: rgba(255, 255, 255, 0.5);
@@ -429,18 +435,22 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
+.col-md-10 {
+  width: 100% !important;
+}
+
 /* Cuadro de informacion de ceremonia principal en ubicacion*/
 #fh5co-counter .event-wrap,
 #fh5co-event .event-wrap {
   border: 2px solid rgba(255, 255, 255, 0.358);
   background: rgba(255, 255, 255, 0.119);
-  padding: 2.5em;
-  width: 100%;
-  float: left;
+  padding: 2em 1em;
+  width: 60%;
+  justify-self: center;
+  /* float: left; */
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
-  border-radius: 4px;
   border-radius: 15px;
   box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.214);
 }
@@ -1469,6 +1479,30 @@ form label {
   font-size: 18px;
   color: #5d5d5d;
 }
+
+#txtInicio{
+  margin-bottom:0em !important;
+}
+#txtSecundario{
+  margin-top: 1em !important;
+  margin-bottom: 3em !important;
+}
+#btnConfirmar{
+  margin-top: 1.5em !important;
+}
+
+#txtCelebramos{
+  margin-top: .20em !important;
+}
+
+#txtCelebramosFecha{
+  margin-top: .10em !important;
+  margin-bottom: .10em !important;
+}
+
+#txtCelebramosMsj{
+  margin-bottom: 2em !important;
+}
 /* Texto ubicacion y otros textos del main*/
 .fh5co-heading {
   margin-bottom: 0em;
@@ -1476,8 +1510,8 @@ form label {
 
 /* Texto solo ubicacion */
 #txtUbicacion{
-  margin-top: .75em;
-  margin-bottom: .75em;
+  margin-top: 0em;
+  margin-bottom: .3em;
 }
 
 .fh5co-heading.fh5co-heading-sm {
@@ -1487,7 +1521,14 @@ form label {
 /* Texto solo de nuestra historia */
 
 #txtHistoria{
-  
+  margin-top: .40em;
+  margin-bottom: .40em;
+}
+
+/* Texto solo de historia2 */
+
+#txtHistoria2{
+  margin-bottom: 2em !important;
 }
 
 /* Texto en main */
@@ -1504,11 +1545,13 @@ form label {
     font-size: 40px;
   }
 }
+/* Texto de formulario para boton confirmar asistencia*/
 .fh5co-heading p {
   font-size: 18px;
   line-height: 1.5;
-  color: #828282;
-  margin-bottom: 1.5em !important;
+  color: #828282 !important;
+  margin-top: .3em !important;
+  margin-bottom: 1.3em !important;
 }
 .fh5co-heading span {
   text-transform: uppercase;
@@ -1660,6 +1703,7 @@ form label {
 #fh5co-started .fh5co-heading p {
   color: rgba(255, 255, 255, 0.5);
 }
+/* BOTONES DE FORMULARIO HTML COMENTADO Y NO MOSTRADO DESDE CSS */
 #fh5co-started .form-control {
   background: rgba(255, 255, 255, 0.2);
   border: none !important;
@@ -1687,17 +1731,39 @@ form label {
 #fh5co-started .form-control:focus {
   background: rgba(255, 255, 255, 0.3);
 }
+
+/* Boton confirmar asistencia sobreescribiendo  */
+.col-md-4{
+  width: 100% !important;
+}
+
+/* Boton confirmar asistencia */
 #fh5co-started .btn {
-  height: 54px;
-  border: none !important;
-  background: #F14E95;
+  height: 3em !important;
+  width: 23% !important;
+  border: 0.15em solid #ffffff;
+  background: transparent;
   color: #fff;
-  font-size: 16px;
+  font-size: 1.6rem;
   text-transform: uppercase;
   font-weight: 400;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 15px !important; 
+  justify-self: center !important;
+  margin-bottom: 1em !important;
 }
+
+#fh5co-started .btn:hover{
+  background-position: right center;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  background-color: white;
+  box-shadow: 0px 0px 8px rgb(255, 255, 255) !important;
+}
+
 #fh5co-started .form-inline .form-group {
   width: 100% !important;
   margin-bottom: 10px;
@@ -1706,7 +1772,7 @@ form label {
   width: 100%;
 }
 #fh5co-started .fh5co-heading {
-  margin-bottom: 30px;
+  margin-bottom: 0;
 }
 #fh5co-started .fh5co-heading h2 {
   margin-bottom: 0;
