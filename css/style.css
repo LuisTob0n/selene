@@ -428,17 +428,21 @@ h1, h2, h3, h4, h5, h6, figure {
     height: inherit;
   }
 }
+
+/* Cuadro de informacion de ceremonia principal en ubicacion*/
 #fh5co-counter .event-wrap,
 #fh5co-event .event-wrap {
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  background: rgba(255, 255, 255, 0.1);
-  padding: 30px;
+  border: 2px solid rgba(255, 255, 255, 0.358);
+  background: rgba(255, 255, 255, 0.119);
+  padding: 2.5em;
   width: 100%;
   float: left;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   -ms-border-radius: 4px;
   border-radius: 4px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.214);
 }
 @media screen and (max-width: 768px) {
   #fh5co-counter .event-wrap,
@@ -446,9 +450,11 @@ h1, h2, h3, h4, h5, h6, figure {
     margin-bottom: 10px;
   }
 }
+
+/* Texto ceremonia principal */
 #fh5co-counter .event-wrap h3,
 #fh5co-event .event-wrap h3 {
-  font-size: 20px;
+  font-size: 2rem;
   color: #fff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   display: block;
@@ -456,11 +462,14 @@ h1, h2, h3, h4, h5, h6, figure {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
+/* Texto de ceremonia principal y horario en ubicacion*/
 #fh5co-counter .event-wrap p, #fh5co-counter .event-wrap span,
 #fh5co-event .event-wrap p,
 #fh5co-event .event-wrap span {
   display: block;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.7rem;
 }
 #fh5co-counter .event-wrap i,
 #fh5co-event .event-wrap i {
@@ -1460,18 +1469,31 @@ form label {
   font-size: 18px;
   color: #5d5d5d;
 }
-
+/* Texto ubicacion y otros textos del main*/
 .fh5co-heading {
-  margin-bottom: 5em;
+  margin-bottom: 0em;
 }
+
+/* Texto solo ubicacion */
+#txtUbicacion{
+  margin-top: .75em;
+  margin-bottom: .75em;
+}
+
 .fh5co-heading.fh5co-heading-sm {
   margin-bottom: 2em;
+}
+
+/* Texto solo de nuestra historia */
+
+#txtHistoria{
+  
 }
 
 /* Texto en main */
 .fh5co-heading h2 {
   font-size: 60px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   line-height: 1.5;
   font-weight: 500;
   color: #22417e;
@@ -1486,6 +1508,7 @@ form label {
   font-size: 18px;
   line-height: 1.5;
   color: #828282;
+  margin-bottom: 1.5em !important;
 }
 .fh5co-heading span {
   text-transform: uppercase;
