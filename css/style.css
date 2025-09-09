@@ -439,7 +439,26 @@ h1, h2, h3, h4, h5, h6, figure {
   width: 100%;
 }
 
+/* Texto en el header de contect */
+#txtHeaderDate{
+  color: rgba(255, 255, 255, 0.5) !important;
+}
 
+#txtHeader{
+  color: rgba(255, 255, 255, 0.979) !important;
+  font-weight: 600;
+}
+#txtHeader:hover{
+  text-shadow: 0px 0px 30px rgba(255, 255, 255, 0.667);
+}
+
+/* Imagen flecha en header index */
+.flecha-gif img {
+  margin-top: 15rem;     /* separa la flecha del botón */
+  width: 50px;          /* ajusta el tamaño del GIF si es necesario */
+  height: auto;         /* mantiene proporción */
+  filter: brightness(0) invert(1); /* lo convierte a blanco */
+}
 
  /* Tamaño contenedor ubicacion */
 #fh5co-counter,
@@ -891,6 +910,8 @@ h1, h2, h3, h4, h5, h6, figure {
   }
 }
 
+
+
 #map {
   width: 100%;
   height: 500px;
@@ -933,11 +954,21 @@ h1, h2, h3, h4, h5, h6, figure {
   margin: 0;
 }
 .fh5co-contact-info ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
   padding: 0 0 0 0;
   margin: 0 0 5rem 0;
   list-style: none;
   position: relative;
 }
+
+.fh5co-contact-info ul li i {
+  margin-right: 1rem;           /* Espacio entre icono y texto */
+  min-width: 20px;             /* Ancho fijo para alinear iconos */
+  text-align: center;
+}
+
 .fh5co-contact-info ul li:before {
   color: #F14E95;
   position: absolute;
@@ -985,6 +1016,32 @@ h1, h2, h3, h4, h5, h6, figure {
   color: #002351;       /* Color del ícono (ejemplo rojo, puedes cambiarlo) */
   font-size: 18px;      /* Opcional: tamaño del ícono */
   vertical-align: middle; /* Alinea el ícono al centro del texto */
+}
+
+@media screen and (max-width: 768px) {
+  .fh5co-contact-info ul li {
+      margin: 0 0 2.5rem 0;
+    }
+
+  .restaurant {
+    margin-top: 3rem !important;
+  }
+  
+  .restaurant i {
+    
+  }
+  
+  .address i {
+    
+  }
+  
+  .phone i {
+    
+  }
+
+  .clock i {
+    
+  }
 }
 
 form label {
@@ -1514,6 +1571,9 @@ form label {
   .heart {
     display: none;
   }
+  .heartAsist{
+    display: none;
+  }
 }
 
 .couple-half {
@@ -1601,6 +1661,15 @@ form label {
     padding-left: 0;
     text-align: center;
   }
+  /* Imagen mobile selene */
+  #txtNombreSel{
+    margin-top: 24rem !important;
+  }
+  /* Imagen mobile Cristian */
+  #txtNombreCris{
+    margin-top: 24rem !important;
+  }
+
 }
 
 .feature-center {
@@ -1667,6 +1736,15 @@ form label {
 
 #txtCelebramosMsj{
   margin-bottom: 2em !important;
+}
+
+@media screen and (max-width: 768px) {
+  #txtHorario{
+    font-size: 1.8rem;
+  }
+  #txtAsistencia{
+    font-size: 1.8rem;
+  }
 }
 
 
@@ -2282,7 +2360,8 @@ form label {
   font-size: 1.4rem;
   text-transform: uppercase;
   font-weight: 600;
-  border-radius: 15px; 
+  border-radius: 15px;
+  margin-top: 4.4rem; 
 }
 
 .btnAsist:hover{
@@ -2300,6 +2379,76 @@ form label {
 
 /* Boton confirmar asistencia  en contact*/
 
+
+
+/* Diseno horario y formulario en contact */
+/* Contenedor centrado horizontalmente en desktop */
+.row.custom-centered {
+    display: flex;
+    justify-content: center; /* Centra las columnas horizontalmente */
+    align-items: flex-start; /* Alinea al top */
+    flex-wrap: wrap;         /* Permite apilar en mobile */
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Ajuste de columnas dentro de row centrado */
+.row.custom-centered > .col-md-5,
+.row.custom-centered > .col-md-5.col-md-offset-1 {
+    float: none;            /* Quita float de Bootstrap 3 */
+    margin: 0 10px;         /* Espaciado horizontal entre columnas */
+}
+
+/* Diseño formulario en mobile en contect*/
+@media screen and (max-width: 768px) {
+    .row.custom-centered {
+      flex-direction: column; /* Apila verticalmente */
+    }
+    #sectionAsist {
+      order: 2; /* Formulario va después */
+      background-color: #eeeef4;
+      width: 100% !important; /* Ocupa todo el ancho */
+      float: none !important; /* Evita que quede flotado */
+      margin: 0 !important;
+      padding: 0 !important; 
+    }
+    .col-md-5.col-md-offset-1 {
+      order: 1; /* Horario y ubicación va primero */
+      margin-left: 0; /* Quita offset en móvil */
+    }
+
+    .container, .fh5co-section{
+      padding: 0 !important;
+    }
+    #txtAsistencia, #rsvp-form{
+      margin-left: 2.4rem;
+      margin-right: 2.4rem;
+    }
+    #txtAsistencia, #txtHorario{
+      margin-top: 1.5rem;
+    }
+
+    .btnAsist{
+      margin-bottom: 1.5rem;
+      margin-top: 0 !important;
+    }
+
+    #bebida{
+      margin-bottom: 1.5rem;
+    }
+
+    #sectionHorario{
+      width: 100% !important; /* Ocupa todo el ancho */
+      float: none !important; /* Evita que quede flotado */
+      margin: 0 !important;
+      padding: 0 !important; 
+    }
+
+    #txtHorario, .fh5co-contact-info ul li{
+      margin-left: 2.4rem;
+      margin-right: 2.4rem;
+    }
+}
 
 
 .btn-primary {

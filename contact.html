@@ -63,7 +63,7 @@
 						<div class="col-xs-10 text-right menu-1">
 							<ul>
 								<li><a href="index.html">Inicio</a></li>
-								<li><a href="about.html">Ubicacion</a></li>
+								<li><a href="index.html">Nuestra historia</a></li>
 							</ul>
 						</div>
 					</div>
@@ -79,9 +79,13 @@
 						<div class="col-md-8 col-md-offset-2 text-center">
 							<div class="display-t">
 								<div class="display-tc animate-box" data-animate-effect="fadeIn">
-									<h1>Confirma tu asistencia</h1>
-									<h2>Nos vamos a casar<a href="https://youtu.be/B4LvDiIi128?si=C397qf9holDHh4t6"
-											target="_blank"> WIP...No des click</a></h2>
+									<h1>¡Estamos felices de tenerte!</h1>
+									<h2 id="txtHeaderDate" >Sabado 13 de diciembre<a  id="txtHeader" href="https://maps.app.goo.gl/1gSDJNNrcGpS1mfT9"
+											target="_blank"> Coatzacoalcos</a></h2>
+									<!-- Flecha GIF debajo del botón -->
+									<div class="flecha-gif">
+										<img src="images/Flecha.gif" alt="Flecha hacia abajo">
+									</div>
 								</div>
 							</div>
 						</div>
@@ -103,7 +107,7 @@
 							<div class="groom">
 								<img src="images/Selene.jpg" id="imgMain" alt="groom" class="img-responsive">
 							</div>
-							<div class="desc-groom">
+							<div class="desc-groom" id="txtNombreSel">
 								<h3>Selene Tobon</h3>
 								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
 									there live the blind texts. Separated they live in Bookmarksgrove</p>
@@ -114,7 +118,7 @@
 							<div class="bride">
 								<img src="images/Cristian.jpg" id="imgMain" alt="groom" class="img-responsive">
 							</div>
-							<div class="desc-bride">
+							<div class="desc-bride" id="txtNombreCris">
 								<h3>Cristian Cales</h3>
 								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
 									there live the blind texts. Separated they live in Bookmarksgrove</p>
@@ -126,12 +130,57 @@
 
 			<div class="fh5co-section">
 				<div class="container">
-					<div class="row">
-						<div class="col-md-6 col-md-push-6 animate-box">
-							<h3>Confirma tu asistencia</h3>
+					<div class="row custom-centered">
+
+						
+
+						<div class="col-md-5 col-md-offset-1 animate-box" id="sectionHorario">
+
+							<div class="fh5co-contact-info">
+								<h3 id="txtHorario">Horario y ubicacion</h3>
+								<ul>
+
+									<li class="restaurant">
+										<i class="fa-solid fa-utensils"></i> Restaurante Piquitos & Brazao
+									</li>
+
+									<li class="phone">
+										<i class="fa-solid fa-mobile"></i>
+										<a href="tel://9212125215">+52 9212125215</a>
+									</li>
+
+									<li class="clock">
+										<i class="fa-solid fa-clock"></i> Ceremonia de 3:00 PM a 4:00 PM
+									</li>
+
+									<li class="address">
+										<i class="fa-solid fa-location-dot"></i> Av. Ignacio Allende 1202, Centro, 96400 Coatzacoalcos.
+									</li>
+
+								</ul>
+							</div>
+
+						</div>
+
+
+
+						<div class="col-md-5 animate-box" id="sectionAsist">
+
+							<h3 id="txtAsistencia">Confirma tu asistencia</h3>
 						
 							<form action="#" method="post" id="rsvp-form" class="rsvp-form">
 								<div class="row">
+
+									<!-- ¿Asistirás? -->
+									<div class="col-md-12 col-sm-12">
+										<div class="form-group">
+											<label class="control-label" style="display:block;">¿Asistirás?</label>
+											<label class="radio-inline"><input type="radio" name="asistencia" value="si" required> Sí</label>
+											<label class="radio-inline" style="margin-left:10px;"><input type="radio" name="asistencia"
+													value="no" required> No</label>
+										</div>
+									</div>
+
 									<!-- Nombre -->
 									<div class="col-md-6 col-sm-6">
 										<div class="form-group">
@@ -174,16 +223,6 @@
 											</select>
 										</div>
 									</div>
-
-									<!-- ¿Asistirás? -->
-									<div class="col-md-12 col-sm-12">
-										<div class="form-group">
-											<label class="control-label" style="display:block;">¿Asistirás?</label>
-											<label class="radio-inline"><input type="radio" name="asistencia" value="si" required> Sí</label>
-											<label class="radio-inline" style="margin-left:10px;"><input type="radio" name="asistencia"
-													value="no" required> No</label>
-										</div>
-									</div>
 						
 									<!-- Botón -->
 									<div class="col-md-12 col-sm-12">
@@ -195,42 +234,14 @@
 							</form>
 						</div>
 
-						<div class="col-md-5 col-md-pull-5 animate-box">
-
-							<div class="fh5co-contact-info">
-								<h3>Ubicacion</h3>
-								<ul>
-
-									<li class="restaurant">
-										<i class="fa-solid fa-utensils"></i> Restaurante Piquitos & Brazao
-									</li>
-
-									<li class="address">
-										<i class="fa-solid fa-location-dot"></i> Av. Ignacio Allende 1202, Centro, 96400 Coatzacoalcos.
-									</li>
-
-									<li class="phone">
-										<i class="fa-solid fa-mobile"></i>
-										<a href="tel://9212125215">+52 9212125215</a>
-									</li>
-
-									<li class="clock">
-										<i class="fa-solid fa-clock"></i> Evento de 3:00 PM a 4:00 PM
-									</li>
-
-								</ul>
-							</div>
-
-						</div>
 					</div>
-
 				</div>
 			</div>
 
 			<div id="map" class="fh5co-map">
 				<iframe
 					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.274152142854!2d-94.42279637010915!3d18.15128057009556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85e982ed9e95b603%3A0xcf51f4a87ec4b03f!2sRestaurante%20Piquitos%20y%20Brazao!5e0!3m2!1ses-419!2smx!4v1757349342757!5m2!1ses-419!2smx"
-					width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+					width="100%" height="100%" style="border:0;" allowfullscreen="" loading="eager"
 					referrerpolicy="no-referrer-when-downgrade">
 				</iframe>
 			</div>
