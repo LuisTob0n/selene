@@ -156,44 +156,37 @@
 	};
 
 
-	var goToTop = function() {
+	var goToTop = function () {
 
-		$('.js-gotop').on('click', function(event){
-			
-			event.preventDefault();
+		$(document).ready(function () {
 
-			$('html, body').animate({
-				scrollTop: $('html').offset().top
-			}, 500, 'easeInOutExpo');
-			
-			return false;
+			// Maneja click en el botón
+			$('.js-gotop').on('click', function (event) {
+				event.preventDefault();
+
+				$('html, body').animate({
+					scrollTop: 0 // scroll hasta arriba
+				}, 500); // velocidad en ms
+
+				return false;
+			});
+
+			// Mostrar/ocultar botón según scroll
+			$(window).scroll(function () {
+				if ($(window).scrollTop() > 200) {
+					$('.js-top').addClass('active'); // muestra el botón
+				} else {
+					$('.js-top').removeClass('active'); // oculta el botón
+				}
+			});
+
 		});
-
-		$(window).scroll(function(){
-
-			var $win = $(window);
-			if ($win.scrollTop() > 200) {
-				$('.js-top').addClass('active');
-			} else {
-				$('.js-top').removeClass('active');
-			}
-
-		});
-	
 	};
 
 
 	// Loading page
 	var loaderPage = function() {
 		$(".fh5co-loader").fadeOut("slow");
-	};
-
-	var counter = function() {
-		$('.js-counter').countTo({
-			 formatter: function (value, options) {
-	      return value.toFixed(options.decimals);
-	    },
-		});
 	};
 
 	var counterWayPoint = function() {
@@ -224,7 +217,6 @@
 		testimonialCarousel();
 		goToTop();
 		loaderPage();
-		counter();
 		counterWayPoint();
 	});
 
