@@ -84,7 +84,9 @@
 											target="_blank"> Coatzacoalcos</a></h2>
 									<!-- Flecha GIF debajo del botón -->
 									<div class="flecha-gif">
-										<img src="images/Flecha.gif" alt="Flecha hacia abajo">
+										<a id="miEnlace" href="#target">
+											<img src="images/Flecha.gif" alt="Flecha hacia abajo">
+										</a>
 									</div>
 								</div>
 							</div>
@@ -97,6 +99,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
+							<div id="target"></div>
 							<h2 id="txtCelebramos">Celebraremos el</h2>
 							<h3 id="txtCelebramosFecha">13 de Diciembre del 2025 Coatzacoalcos, Veracruz</h3>
 							<p id="txtCelebramosMsj">Te invitamos a celebrar con nosotros el día más especial de nuestras vidas.</p>
@@ -137,6 +140,7 @@
 						<div class="col-md-5 col-md-offset-1 animate-box" id="sectionHorario">
 
 							<div class="fh5co-contact-info">
+								<div id="targetMobile"></div>
 								<h3 id="txtHorario">Horario y ubicacion</h3>
 								<ul>
 
@@ -153,7 +157,7 @@
 										<i class="fa-solid fa-clock"></i> Ceremonia de 3:00 PM a 4:00 PM
 									</li>
 
-									<li class="address">
+									<li class="address" id="txtDireccion">
 										<i class="fa-solid fa-location-dot"></i> Av. Ignacio Allende 1202, Centro, 96400 Coatzacoalcos.
 									</li>
 
@@ -165,22 +169,22 @@
 
 
 						<div class="col-md-5 animate-box" id="sectionAsist">
-
 							<h3 id="txtAsistencia">Confirma tu asistencia</h3>
-						
+							
 							<form action="#" method="post" id="rsvp-form" class="rsvp-form">
 								<div class="row">
-
+							
 									<!-- ¿Asistirás? -->
 									<div class="col-md-12 col-sm-12">
-										<div class="form-group">
-											<label class="control-label" style="display:block;">¿Asistirás?</label>
-											<label class="radio-inline"><input type="radio" name="asistencia" value="si" required> Sí</label>
-											<label class="radio-inline" style="margin-left:10px;"><input type="radio" name="asistencia"
-													value="no" required> No</label>
+										<div class="form-group" id="groupBtn">
+											<label class="control-label">¿Nos acompañaras?</label>
+											<div class="radio-group">
+												<label><input type="radio" name="asistencia" value="si" required><span>Sí asistire</span></label>
+												<label><input type="radio" name="asistencia" value="no" required><span>No asistire</span></label>
+											</div>
 										</div>
 									</div>
-
+							
 									<!-- Nombre -->
 									<div class="col-md-6 col-sm-6">
 										<div class="form-group">
@@ -188,52 +192,55 @@
 											<input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
 										</div>
 									</div>
-						
+							
 									<!-- Apellido -->
 									<div class="col-md-6 col-sm-6">
 										<div class="form-group">
 											<label for="apellido" class="sr-only">Apellido</label>
-											<input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido"
-												required>
+											<input type="text" class="form-control" id="apellido" name="apellido" placeholder="Apellido" required>
 										</div>
 									</div>
-						
+							
 									<!-- Platillo -->
 									<div class="col-md-12 col-sm-12">
 										<div class="form-group">
 											<label for="platillo" class="sr-only">Platillo</label>
 											<select class="form-control" id="platillo" name="platillo" required>
-												<option value="">-- Selecciona tu platillo --</option>
+												<option value="">Selecciona tu platillo</option>
 												<option value="tacos">Tacos</option>
 												<option value="empanada">Empanada</option>
 												<option value="tostada">Tostada</option>
 											</select>
 										</div>
 									</div>
-						
+							
 									<!-- Bebida -->
 									<div class="col-md-12 col-sm-12">
 										<div class="form-group">
 											<label for="bebida" class="sr-only">Bebida</label>
 											<select class="form-control" id="bebida" name="bebida" required>
-												<option value="">-- Selecciona tu bebida --</option>
+												<option value="">Selecciona tu bebida</option>
 												<option value="horchata">Horchata</option>
 												<option value="agua-limon">Agua de Limón</option>
 												<option value="agua-simple">Agua simple</option>
 											</select>
 										</div>
 									</div>
-						
+							
 									<!-- Botón -->
 									<div class="col-md-12 col-sm-12">
 										<div class="form-group text-center">
 											<input type="submit" class="btnAsist" value="Confirmar asistencia">
 										</div>
 									</div>
+							
 								</div>
 							</form>
 						</div>
 
+						<!-- FIREBASE -->
+						<script type="module" src="js/firebaseForm.js"></script>
+						<!-- FIREBASE -->
 					</div>
 				</div>
 			</div>
@@ -292,6 +299,7 @@
 		<!-- Google Map -->
 		<!-- <script src="https://maps.googleapis.com/maps/api/js"></script>
 		<script src="js/google_map.js"></script> -->
+		<script src="js/enlaceMobile.js"></script>
 		<!-- Main -->
 		<script src="js/main.js"></script>
 

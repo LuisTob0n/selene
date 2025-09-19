@@ -1426,6 +1426,8 @@ form label {
   padding: 1em 0;
   clear: both;
 }
+
+/* Espaciado lateral y arriba y abajo del main en index y contact */
 @media screen and (max-width: 768px) {
   #fh5co-testimonial,
   #fh5co-services,
@@ -1436,7 +1438,7 @@ form label {
   #fh5co-couple,
   #fh5co-gallery,
   .fh5co-section {
-    padding: 1em 0;
+    padding: 1em 2.4rem;
   }
 
   #fh5co-footer{
@@ -1747,6 +1749,223 @@ form label {
   }
 }
 
+#txtDireccion{
+  margin: 0;
+}
+
+
+
+/* Diseño del form */
+
+  /* Contenedor del formulario */
+  #sectionAsist {
+    padding: 0rem !important;
+  }
+
+  /* Título */
+  #sectionAsist h3 {
+    margin-bottom: 4rem !important;
+  }
+
+  select {
+    padding: 0.5rem 2.5rem 0.5rem 0.75rem !important;
+  }
+
+
+  /* Inputs de texto y selects */
+  .form-control {
+      width: 100% !important;
+      padding: 0.8rem 1rem !important;
+      margin-bottom: 2rem !important;
+      font-size: 1.4rem !important;
+      border: 1px solid #ddd !important;
+      border-radius: 15px !important;
+      background: #ffffff !important;
+      transition: all 0.3s ease !important;
+      height: 4.5rem !important;
+  }
+
+  .form-control:focus {
+      border-color: #007bff !important;
+      background: #ffffff !important;
+      outline: none !important;
+      box-shadow: 0 0 6px rgba(0,123,255,0.25) !important;
+  }
+
+
+
+  /* Diseño radio button */
+
+  #groupBtn{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem !important;
+  }
+  
+  /* ===== Alineación: label y radios en una línea (solo para esta sección) ===== */
+  #sectionAsist .form-group > .control-label {
+    display: inline-block !important;
+    margin: 0 3rem 0 0 !important; /*Espacio entre label y radio button*/
+    font-weight: 550 !important;
+    vertical-align: middle !important;
+    color: #333 !important;
+    font-size: 1.6rem !important;
+  }
+
+  /* El grupo de radios se muestra inline-flex al lado derecho del label */
+  #sectionAsist .form-group > .radio-group {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 3rem !important; /*Espacio entre radio butons*/
+    /* margin-bottom: 1.5rem !important; */
+    padding: 0 !important;
+  }
+
+  /* ===== Estilos "pill" para cada opción ===== */
+  #sectionAsist .radio-group {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #sectionAsist .radio-group label {
+    display: flex !important;
+    align-items: center !important;
+    cursor: pointer !important;
+    position: relative !important;
+    overflow: hidden !important;
+    margin-bottom: 0 !important;
+    padding: 0.18em 0.0em !important;
+    border-radius: 99em !important;
+    transition: background-color 0.25s ease !important;
+  }
+
+  /* Mantener input accesible fuera de la vista (no visible) */
+  #sectionAsist .radio-group input[type="radio"] {
+    position: absolute !important;
+    left: -9999px !important;
+  }
+
+  /* El span visible dentro del label (texto + circulito) */
+  #sectionAsist .radio-group span {
+    display: flex !important;
+    align-items: center !important;
+    padding: 0.22em 0.5em 0.22em 0.22em !important; /*Tamaño del pill perse*/
+    border-radius: 99em !important;
+    transition: 0.25s ease !important;
+    font-size: 1.3rem !important;  /*Tamaño de la fuente dentro del boton pill azul y rojo*/
+    color: #333333 !important;
+  }
+
+  /* Circulito (outline) */
+  #sectionAsist .radio-group span::before {
+    content: "" !important;
+    display: block !important;
+    width: 1.5em !important; /*Ancho de la pill*/
+    height: 1.5em !important; /*Alto de la pill*/
+    border-radius: 50% !important;
+    margin-left: .3em !important;
+    margin-right: .3em !important;  /*Sepacion entre circulito blanco y texto de la pill*/
+    background: #ffffff !important; 
+    box-shadow: inset 0 0 0 0.12em #007bff !important; /* por defecto azul en el outline */
+    transition: 0.25s ease !important;
+  }
+
+  /* ===== Estados azul para "si" (hover + checked) ===== */
+  #sectionAsist .radio-group input[value="si"] + span:hover,
+  #sectionAsist .radio-group label:hover input[value="si"] + span,
+  #sectionAsist .radio-group input[value="si"]:checked + span {
+    background-color: #e6ebff !important;
+  }
+  #sectionAsist .radio-group input[value="si"]:checked + span::before {
+    box-shadow: inset 0 0 0 0.45em #007bff !important;
+  }
+
+  /* ===== Estados rojo para "no" (hover + checked) ===== */
+  #sectionAsist .radio-group input[value="no"] + span:hover,
+  #sectionAsist .radio-group label:hover input[value="no"] + span,
+  #sectionAsist .radio-group input[value="no"]:checked + span {
+    background-color: #ffe6e6 !important;
+  }
+  #sectionAsist .radio-group input[value="no"]:checked + span::before {
+    box-shadow: inset 0 0 0 0.45em #ff0000 !important; 
+  }
+
+  /* Asegurar que el outline inicial del circulito sea rojo para "no" (sin checked) */
+  #sectionAsist .radio-group input[value="no"] + span::before {
+    box-shadow: inset 0 0 0 0.12em #c30000 !important;
+  }
+
+  /* Diseño radio button */
+
+
+
+  /* Botón ya definido en tu CSS */
+  .btnAsist {
+      text-align: center !important;
+      padding: .7rem 1.5rem !important;
+      background-color: transparent !important;
+      color: rgb(0, 0, 0) !important;
+      border: 0.08em solid #000000 !important;
+      font-size: 1.4rem !important;
+      text-transform: uppercase !important;
+      font-weight: 600 !important;
+      border-radius: 15px !important;
+      margin-top: .4rem !important;
+      cursor: pointer !important;
+      transition: all 0.3s ease !important;
+  }
+
+  .btnAsist:hover {
+      background: #000 !important;
+      color: #fff !important;
+  }
+
+
+  /* Diseño del form */
+
+
+  @media screen and (max-width: 768px) {
+
+    #txtDireccion{
+      margin-left: 2.4rem !important;
+    }
+
+    #sectionAsist h3 {
+      margin-bottom: 3.5rem !important;
+    }
+  
+    #sectionAsist .form-group > .control-label {
+      margin: 0 1rem 0 0 !important;
+      font-size: 1.4rem !important;
+    }
+
+    .form-control {
+      border: 1px solid #e9e9e9 !important;
+      border-radius: 50px !important;
+      height: 5rem !important;
+    }
+
+    /* El span visible dentro del label (texto + circulito) */
+    #sectionAsist .radio-group span {
+      font-size: 1.2rem !important;  /*Tamaño de la fuente dentro del boton pill azul y rojo*/
+    }
+
+    #sectionAsist .form-group > .radio-group {
+      gap: 0rem !important;
+    }
+
+    #sectionAsist .radio-group span::before {
+      width: 1.7em !important; /*Ancho de la pill*/
+      height: 1.7em !important; /*Alto de la pill*/
+    }
+
+    .btnAsist {
+      border-radius: 50px !important;
+      margin-bottom: 1.9rem !important;
+    }
+
+  }
+
 
 .fh5co-heading.fh5co-heading-sm {
   margin-bottom: 2em;
@@ -1777,6 +1996,9 @@ form label {
 
 /* Diseño responsive para la historia */
 @media screen and (max-width: 768px) {
+
+  
+
   .couple-half h3 {
     font-family: "Sacramento", Arial, serif;
     color: #22417e;
@@ -2588,19 +2810,6 @@ form label {
   opacity: 1;
 }
 
-.form-control {
-  box-shadow: none;
-  background: transparent;
-  border: 2px solid rgba(0, 0, 0, 0.1);
-  height: 54px;
-  font-size: 18px;
-  font-weight: 300;
-}
-.form-control:active, .form-control:focus {
-  outline: none;
-  box-shadow: none;
-  border-color: #F14E95;
-}
 
 .row-pb-md {
   padding-bottom: 4em !important;
