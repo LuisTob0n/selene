@@ -1798,18 +1798,20 @@ form label {
 
   #groupBtn{
     display: flex;
-    align-items: center;
+    flex-direction: column; /*Eliminar linea para que quede en 1 linea botones si y no con el texto*/
+    align-items: flex-start; /*Cambiar a center para que quede en 1 linea*/
     margin-bottom: 1rem !important;
+    
   }
   
   /* ===== Alineación: label y radios en una línea (solo para esta sección) ===== */
   #sectionAsist .form-group > .control-label {
     display: inline-block !important;
-    margin: 0 3rem 0 0 !important; /*Espacio entre label y radio button*/
-    font-weight: 550 !important;
+    margin: 0 3rem .3rem 0 !important; /*Espacio entre label y radio button*/
     vertical-align: middle !important;
     color: #333 !important;
-    font-size: 1.6rem !important;
+    font-size: 1.5rem !important;
+    
   }
 
   /* El grupo de radios se muestra inline-flex al lado derecho del label */
@@ -1819,12 +1821,14 @@ form label {
     gap: 3rem !important; /*Espacio entre radio butons*/
     /* margin-bottom: 1.5rem !important; */
     padding: 0 !important;
+    
   }
 
   /* ===== Estilos "pill" para cada opción ===== */
   #sectionAsist .radio-group {
     margin: 0 !important;
     padding: 0 !important;
+    
   }
 
   #sectionAsist .radio-group label {
@@ -1834,9 +1838,9 @@ form label {
     position: relative !important;
     overflow: hidden !important;
     margin-bottom: 0 !important;
-    padding: 0.18em 0.0em !important;
     border-radius: 99em !important;
     transition: background-color 0.25s ease !important;
+    background-color: #00000008;
   }
 
   /* Mantener input accesible fuera de la vista (no visible) */
@@ -1866,7 +1870,7 @@ form label {
     margin-left: .3em !important;
     margin-right: .3em !important;  /*Sepacion entre circulito blanco y texto de la pill*/
     background: #ffffff !important; 
-    box-shadow: inset 0 0 0 0.12em #007bff !important; /* por defecto azul en el outline */
+    box-shadow: inset 0 0 0 0.12em #4dff00 !important; /* por defecto azul en el outline */
     transition: 0.25s ease !important;
   }
 
